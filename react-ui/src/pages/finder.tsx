@@ -24,7 +24,7 @@ const FinderPage = () => {
       <p>---------------------------------------------------</p>
       {/* forEach doesnt return anything, while map return a list of tags */}
       {dummyList.map((course) => (
-        <div>
+        <div key={course.code}>
 
             <h3>{course.code}: {course.title}</h3>
             <p>{course.prerequisite.join(' --> ')}</p>
