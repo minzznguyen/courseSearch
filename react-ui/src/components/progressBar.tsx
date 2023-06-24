@@ -1,24 +1,7 @@
 import React from "react";
-
-const ProgressBar = () => {
-  const prerequisites = [
-    {
-      name: "Math I",
-      finished: true,
-    },
-    {
-      name: "Math II",
-      finished: true,
-    },
-    {
-      name: "Math III",
-      finished: true,
-    },
-    {
-      name: "Math IV",
-      finished: false,
-    },
-  ];
+import { PresProps } from "../types";
+const ProgressBar = (props: PresProps) => {
+  const prerequisites = props.items
 
   const prereqlength = (100 / prerequisites.length).toString() + "%";
   console.log(prereqlength);

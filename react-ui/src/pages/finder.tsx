@@ -1,14 +1,51 @@
 import React from "react";
 import { useState } from "react";
 import ProgressBar from "../components/progressBar";
-const cardList = [
+import { Courses } from "../types";
+const cardList: Courses = [
   {
     name: "Math II",
     desc: "Math is awesome",
+    pres: [
+      {
+        name: "Math I",
+        finished: true,
+      },
+      {
+        name: "Math II",
+        finished: true,
+      },
+      {
+        name: "Math III",
+        finished: true,
+      },
+      {
+        name: "Math IV",
+        finished: false,
+      },
+    ],
   },
   {
     name: "Biology",
     desc: "Biology is cool",
+    pres: [
+      {
+        name: "Bio I",
+        finished: true,
+      },
+      {
+        name: "Bio II",
+        finished: true,
+      },
+      {
+        name: "Bio III",
+        finished: true,
+      },
+      {
+        name: "Bio IV",
+        finished: false,
+      },
+    ],
   },
 ];
 
@@ -84,7 +121,7 @@ const FinderPage = () => {
               </div>
 
               <div className="progressbar">
-                <ProgressBar/>
+                <ProgressBar items={item.pres}/>
               </div>
             </div>
           ))}
